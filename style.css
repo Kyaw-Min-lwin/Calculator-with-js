@@ -5,19 +5,22 @@
 }
 
 body {
-    height: 100vh;
-    background: linear-gradient(to left, rgb(58, 238, 118), rgb(64, 204, 223));
-}
-
-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    background: linear-gradient(to left, rgb(58, 238, 118), rgb(64, 204, 223));
+    font-family: sans-serif;
 }
 
-body>div {
-    width: 23%;
+main {
+    width: 50%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 input[type='text'] {
@@ -27,6 +30,8 @@ input[type='text'] {
     color: white;
     border: 0px;
     font-size: 26px;
+    padding: 1rem;
+    text-align: right;
 }
 
 #grid-container {
@@ -36,7 +41,6 @@ input[type='text'] {
     gap: 2px;
     width: 100%;
     background-color: white;
-    /* margin-top: -4px; */
 }
 
 #AC {
@@ -49,7 +53,6 @@ input[type='text'] {
 
 button {
     font-size: 20px;
-    font-family: sans-serif;
     background-color: rgb(184, 236, 231);
     border: 0px;
     font-weight: 700;
@@ -57,4 +60,16 @@ button {
 
 button:hover {
     background-color: rgb(234, 240, 239);
+}
+
+@media (max-width:700px) {
+    main {
+        width: 400px;
+    }
+}
+
+@media (max-width:400px) {
+    main {
+        width: 320px;
+    }
 }
